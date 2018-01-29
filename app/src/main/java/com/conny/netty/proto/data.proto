@@ -1,0 +1,7 @@
+option java_outer_classname = "DataProto";
+
+message Data {
+    required int32 code = 1;
+    required string uid = 2;
+    required bytes data = 3;
+}

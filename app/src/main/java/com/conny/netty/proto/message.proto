@@ -1,0 +1,14 @@
+option java_outer_classname = "MessageProto";
+
+message Person {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 age = 3;
+}
+
+message Book {
+    required int32 id = 1;
+    required string name = 2;
+    required int32 price = 3;
+    required Person auth = 4;
+}
