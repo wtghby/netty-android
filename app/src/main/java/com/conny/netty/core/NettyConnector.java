@@ -37,7 +37,9 @@ public class NettyConnector {
             new Thread(new Runnable() {
                 @Override
                 public void run() {
-                    mChannel.writeAndFlush(data);
+                    synchronized (mChannel) {
+                        mChannel.writeAndFlush(data);
+                    }
                 }
             }).start();
         }
